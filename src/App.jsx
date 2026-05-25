@@ -1,20 +1,18 @@
-// src/App.jsx
 import React from 'react';
-// Aquí irás importando tus componentes o secciones, por ejemplo:
-// import Navbar from './components/Navbar';
-// import Hero from './sections/Hero';
+import Navbar from './components/navbar';
+import Hero from './sections/hero';
+import './App.css';
 
 function App() {
   return (
-    <div className="app-container">
-      {/* <Navbar /> */}
+    <>
+      <Navbar />
+      
+      {/* Todo el resto de tus secciones irán aquí abajo */}
       <main>
-        {/* <Hero /> */}
-        <section><h2>Sección Sobre Mí (Próximamente)</h2></section>
-        <section><h2>Sección Proyectos (Próximamente)</h2></section>
-        <section><h2>Sección Contacto (Próximamente)</h2></section>
+        <Hero />
       </main>
-    </div>
+    </>
   );
 }
 

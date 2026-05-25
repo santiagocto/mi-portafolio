@@ -1,0 +1,129 @@
+/* Contenedor principal de la sección */
+.hero-section {
+  background-color: #050505; /* Un negro casi puro, muy elegante */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 0 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Centrado y ancho máximo del contenido */
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Imagen de perfil */
+.avatar-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #333;
+  margin-bottom: 8px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Agrupación de Título y Badge */
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* El Badge de "Disponible" */
+.status-badge {
+  background-color: #ffffff67; 
+  color: #ffffff; 
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* Texto de la biografía */
+.hero-bio {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #a3a3a3; 
+  margin: 0;
+  max-width: 700px;
+}
+
+
+.highlight-text {
+  color: #00eeff; 
+  font-weight: 600;
+}
+
+.highlight-text-alt {
+  color: #00eeff; 
+  font-weight: 600;
+}
+
+.hero-bio strong {
+  color: #ffffff;
+}
+
+/* Contenedor de botones */
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Estilos de los botones sociales */
+.btn-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #171717;
+  color: #e5e5e5;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid #262626;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-social:hover {
+  background-color: #262626;
+  border-color: #404040;
+  color: #ffffff;
+  transform: translateY(-2px); 
+}
+
+/* Botón de CV destacado */
+.btn-cv {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.btn-cv:hover {
+  background-color: #e5e5e5;
+  color: #000000;
+}

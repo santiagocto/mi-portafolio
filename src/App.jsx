@@ -1,17 +1,21 @@
 import React from 'react';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import Hero from './sections/hero';
+import Projects from './sections/projects';
+import About from './sections/about'; 
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <>
       <Navbar />
-      
-      {/* Todo el resto de tus secciones irán aquí abajo */}
       <main>
         <Hero />
+        <Projects /> 
+        <About />   
       </main>
+      <Footer />
     </>
   );
 }

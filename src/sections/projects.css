@@ -1,0 +1,232 @@
+/* Contenedor principal de la sección */
+.projects-section {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  max-width: 1000px; 
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Sistema de Grid para las tarjetas */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 40px; 
+}
+
+/* Diseño de la Tarjeta */
+.project-card {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #404040;
+}
+
+/* Cabecera de la tarjeta */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* El título morado estilo captura de pantalla */
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00eeff; 
+  margin: 0;
+}
+
+/* Botón de Preview (sin Github) */
+.btn-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #e5e5e5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #404040;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-preview:hover {
+  background-color: #e5e5e5;
+  color: #000000;
+}
+
+/* Descripción */
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a3a3a3;
+  margin: 0;
+}
+
+/* Badges de Tecnologías */
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-badge {
+  background-color: #171717;
+  color: #d4d4d4;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Contenedor de la Imagen */
+.project-image-wrapper {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #262626;
+  aspect-ratio: 16 / 9; 
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; 
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .projec t-image {
+  transform: scale(1.02);  
+}
+
+/* ============ ESTILOS DEL CARRUSEL ============ */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Botones de navegación */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 238, 255, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button-prev {
+  left: 15px;
+}
+
+.carousel-button-next {
+  right: 15px;
+}
+
+/* Indicadores de puntos */
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #00eeff;
+  border-color: #00eeff;
+  width: 32px;
+  border-radius: 6px;
+}
+
+.carousel-dot:hover:not(.active) {
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
+}

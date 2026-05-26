@@ -1,0 +1,125 @@
+.about-section {
+  background-color: #050505;
+  color: #ffffff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.about-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  color: #a3a3a3;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text-area {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #a3a3a3;
+  margin: 0;
+}
+
+.about-description strong {
+  color: #ffffff;
+}
+
+.highlight-name {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.about-image-area {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.image-wrapper {
+  width: 280px;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  transform: rotate(4deg);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  border: 1px solid #262626;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.image-wrapper:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 15px 40px rgba(192, 132, 252, 0.15);
+  border-color: #c084fc;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tech-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.tech-item {
+  font-size: 4rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(20%);
+  cursor: pointer;
+}
+
+.tech-item:hover {
+  transform: translateY(-8px);
+  filter: grayscale(0%) drop-shadow(0 10px 15px rgba(255, 255, 255, 0.1));
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .section-title {
+    justify-content: center;
+  }
+}

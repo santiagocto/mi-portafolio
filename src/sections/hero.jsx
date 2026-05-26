@@ -1,6 +1,6 @@
 import React from 'react';
 import './hero.css';
-import miFoto from '../img/1751136592032.png'; // Ajusta el nombre y la extensión según tu archivo
+import miFoto from '../img/1751136592032.png'; // ¡IMPORTANTE! Asegúrate de que esta ruta sea correcta y el archivo exista.
 
 const Hero = () => {
   return (

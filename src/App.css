@@ -1,0 +1,39 @@
+/* ============================================
+   ANIMACIONES DE SCROLL PROGRESIVAS
+   ============================================ */
+
+/* Estilos base para animación de scroll */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Navbar - Animación desde arriba */
+.navbar-container.scroll-animate {
+  transform: translateY(-50px);
+}
+
+/* Sobre mí - Animación desde la izquierda */
+.about-section.scroll-animate,
+.about-container.scroll-animate {
+  transform: translateX(-100px);
+}
+
+/* Elementos internos - Sin transformación especial */
+.hero-section.scroll-animate,
+.hero-content.scroll-animate,
+.projects-section.scroll-animate,
+.projects-container.scroll-animate,
+.project-card.scroll-animate,
+.contact-section.scroll-animate,
+.contact-container.scroll-animate,
+.footer-container.scroll-animate,
+.about-content.scroll-animate,
+.about-text-area.scroll-animate,
+.about-image-area.scroll-animate,
+.tech-content.scroll-animate,
+.tech-item.scroll-animate,
+.contact-form.scroll-animate,
+.contact-section .contact-container > div.scroll-animate {
+  transform: translateY(30px);
+}

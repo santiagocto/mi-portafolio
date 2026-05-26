@@ -53,7 +53,7 @@
 }
 
 .highlight-name {
-  color: #c084fc;
+  color: #00eeff; 
   font-weight: 600;
 }
 
@@ -78,7 +78,7 @@
 .image-wrapper:hover {
   transform: rotate(0deg) scale(1.05);
   box-shadow: 0 15px 40px rgba(192, 132, 252, 0.15);
-  border-color: #c084fc;
+  border-color: #00eeff; 
 }
 
 .profile-pic {

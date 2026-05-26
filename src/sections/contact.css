@@ -64,7 +64,7 @@
 .input-group input:focus,
 .input-group textarea:focus {
   outline: none;
-  border-color: #c084fc; 
+  border-color: #00eeff; 
   box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.2);
 }
 

@@ -2,6 +2,7 @@
 .projects-section {
   background-color: #050505;
   color: #ffffff;
+  padding: 80px 20px;
   font-family: system-ui, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
@@ -103,16 +104,6 @@
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid #333;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.tech-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
 }
 
 /* Contenedor de la Imagen */
@@ -122,19 +113,19 @@
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #262626;
-  aspect-ratio: 16 / 9; 
+  aspect-ratio: 16 / 9;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top; 
+  object-fit: contain;
+  object-position: center; 
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .projec t-image {
-  transform: scale(1.02);  
+.project-card:hover .project-image {
+  transform: scale(1.02); 
 }
 
 /* ============ ESTILOS DEL CARRUSEL ============ */

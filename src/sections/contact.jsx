@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import './contact.css';
 
@@ -89,13 +90,29 @@ const Contact = () => {
 
   return (
     <section id="contacto" className="contact-section">
-      <div className="contact-container">
-        <h2 className="section-title">Contáctame</h2>
-        <p className="contact-subtitle">¿Tienes un proyecto en mente o una oportunidad laboral? Hablemos.</p>
+      <motion.div 
+        className="contact-container"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <motion.h2 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2 }}
+          className="section-title"
+        >Contáctame</motion.h2>
+        <p className="contact-subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
         
-        <form ref={form} onSubmit={sendEmail} className="contact-form">
-          {/* El atributo "name" debe coincidir EXACTAMENTE con las variables de tu plantilla de EmailJS */}
-          
+        <motion.form 
+          ref={form} 
+          onSubmit={sendEmail} 
+          className="contact-form"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
           <div className="input-group">
             <label htmlFor="user_name">Nombre completo</label>
             <input 
@@ -157,10 +174,9 @@ const Contact = () => {
             {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
           </button>
 
-          
           {statusMessage && <p className={`status-message ${Object.keys(formErrors).length > 0 ? 'error' : 'success'}`}>{statusMessage}</p>}
-        </form>
-      </div>
+        </motion.form>
+      </motion.div>
     </section>
   );
 };

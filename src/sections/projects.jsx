@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './projects.css'; // Asegúrate de que el archivo se llame projects.css
 import { FaReact } from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript } from 'react-icons/si';
@@ -34,6 +35,24 @@ const projectsData = [
   },
 
 ];
+
+// Variantes para animaciones escalonadas (Stagger)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
+
+const cardVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } 
+  }
+};
 
 // Componente para el carrusel
 const ImageCarousel = ({ images }) => {
@@ -96,13 +115,24 @@ const ImageCarousel = ({ images }) => {
 const Projects = () => {
   return (
     <section id="proyectos" className="projects-section">
-      <div className="projects-container">
-        <h2 className="section-title">Proyectos Destacados</h2>
+      <motion.div 
+        className="projects-container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
+        <motion.h2 variants={cardVariants} className="section-title">
+          Proyectos Destacados
+        </motion.h2>
         
         <div className="projects-grid">
           {projectsData.map((project) => (
-            <article key={project.id} className="project-card">
-              
+            <motion.article 
+              key={project.id} 
+              className="project-card"
+              variants={cardVariants}
+            >
               {/* Cabecera: Título y Botón Preview */}
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
@@ -141,10 +171,10 @@ const Projects = () => {
                 )}
               </div>
 
-            </article>
+            </motion.article>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

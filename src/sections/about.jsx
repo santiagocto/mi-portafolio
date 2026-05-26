@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './about.css';
 // Importamos íconos de FontAwesome (muy estables)
 import { 
@@ -12,11 +13,25 @@ import { SiTypescript, SiTailwindcss, SiPostgresql, SiMysql } from 'react-icons/
 const About = () => {
   return (
     <section id="sobre-mi" className="about-section">
-      <div className="about-container">
+      <motion.div 
+        className="about-container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={{
+          visible: { transition: { staggerChildren: 0.3 } }
+        }}
+      >
         
         {/* --- SECCIÓN SOBRE MÍ --- */}
         <div className="about-content">
-          <div className="about-text-area">
+          <motion.div 
+            className="about-text-area"
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+            }}
+          >
             <h2 className="section-title">
               <FaUser className="title-icon" /> Sobre mí
             </h2>
@@ -25,9 +40,15 @@ const About = () => {
               <br /><br />
               Actualmente estoy enfocando mi carrera profesional hacia el <strong>Cloud Engineering</strong>, por lo que disfruto aprendiendo constantemente sobre nuevas tecnologías, frameworks y servicios en la nube para construir soluciones escalables.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="about-image-area">
+          <motion.div 
+            className="about-image-area"
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+            }}
+          >
             <div className="image-wrapper">
               {/* Recuerda cambiar esta URL por tu foto real */}
               <img 
@@ -36,32 +57,53 @@ const About = () => {
                 className="profile-pic"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* --- SECCIÓN TECNOLOGÍAS --- */}
-        <div className="tech-content">
+        <motion.div 
+          className="tech-content"
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } }
+          }}
+        >
           <h2 className="section-title">
             <FaCode className="title-icon" /> Tecnologías
           </h2>
           
           <div className="tech-grid">
-            <div className="tech-item" style={{ color: '#E34F26' }} title="HTML5"><FaHtml5 /></div>
-            <div className="tech-item" style={{ color: '#1572B6' }} title="CSS3"><FaCss3Alt /></div>
-            <div className="tech-item" style={{ color: '#F7DF1E' }} title="JavaScript"><FaJs /></div>
-            <div className="tech-item" style={{ color: '#3178C6' }} title="TypeScript"><SiTypescript /></div>
-            <div className="tech-item" style={{ color: '#61DAFB' }} title="React"><FaReact /></div>
-            <div className="tech-item" style={{ color: '#06B6D4' }} title="Tailwind CSS"><SiTailwindcss /></div>
-            <div className="tech-item" style={{ color: '#339933' }} title="Node.js"><FaNodeJs /></div>
-            <div className="tech-item" style={{ color: '#3776AB' }} title="Python"><FaPython /></div>
-            <div className="tech-item" style={{ color: '#2496ED' }} title="Docker"><FaDocker /></div>
-            <div className="tech-item" style={{ color: '#FF9900' }} title="AWS"><FaAws /></div>
-            <div className="tech-item" style={{ color: '#336791' }} title="PostgreSQL"><SiPostgresql /></div>
-            <div className="tech-item" style={{ color: '#00758F' }} title="MySQL"><SiMysql /></div>
+            {[
+              { icon: <FaHtml5 />, color: '#E34F26', name: 'HTML5' },
+              { icon: <FaCss3Alt />, color: '#1572B6', name: 'CSS3' },
+              { icon: <FaJs />, color: '#F7DF1E', name: 'JavaScript' },
+              { icon: <SiTypescript />, color: '#3178C6', name: 'TypeScript' },
+              { icon: <FaReact />, color: '#61DAFB', name: 'React' },
+              { icon: <SiTailwindcss />, color: '#06B6D4', name: 'Tailwind CSS' },
+              { icon: <FaNodeJs />, color: '#339933', name: 'Node.js' },
+              { icon: <FaPython />, color: '#3776AB', name: 'Python' },
+              { icon: <FaDocker />, color: '#2496ED', name: 'Docker' },
+              { icon: <FaAws />, color: '#FF9900', name: 'AWS' },
+              { icon: <SiPostgresql />, color: '#336791', name: 'PostgreSQL' },
+              { icon: <SiMysql />, color: '#00758F', name: 'MySQL' },
+            ].map((tech, i) => (
+              <motion.div 
+                key={i}
+                variants={{
+                  hidden: { scale: 0, opacity: 0 },
+                  visible: { scale: 1, opacity: 1 }
+                }}
+                className="tech-item" 
+                style={{ color: tech.color }} 
+                title={tech.name}
+              >
+                {tech.icon}
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
-      </div>
+      </motion.div>
     </section>
   );
 };

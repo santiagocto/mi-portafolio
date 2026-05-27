@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './projects.css'; // Asegúrate de que el archivo se llame projects.css
+import './projects.css'; 
 import { FaReact } from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript } from 'react-icons/si';
 import ProjectA1 from '../img/ProjectA1.png';
@@ -24,7 +24,7 @@ const projectsData = [
     description: 'Desarrollo integral de una Landing Page desde cero. Diseño minimalista, completamente responsivo y optimizado para una excelente experiencia de usuario y conversión de clientes.',
     technologies: ['React', 'TailwindCSS', 'TypeScript'],
     previewLink: 'https://constructoraamco.com',
-    imagePlaceholder: '/amco-preview.png', // Cambia esto por la ruta de tu imagen
+    imagePlaceholder: '/amco-preview.png', 
     carouselImages: [
       ProjectA1,
       ProjectA2,

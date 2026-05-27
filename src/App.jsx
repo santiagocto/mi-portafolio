@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/navbar';
+import WhatsAppButton from './components/WhatsAppButton';
 import Hero from './sections/hero';
 import Projects from './sections/projects';
 import About from './sections/about'; 
@@ -17,6 +18,7 @@ function App() {
         <About />  
         <Contact /> 
       </main>
+      <WhatsAppButton />
       <Footer />
     </>
   );

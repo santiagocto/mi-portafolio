@@ -1,8 +1,6 @@
 /* ============================================
    OPTIMIZACIÓN DE SCROLL Y GLOBAL
    ============================================ */
-
-/* Glassmorphism para el Navbar (aplica a tu clase de navbar) */
 .navbar-fixed {
   position: fixed;
   top: 0;

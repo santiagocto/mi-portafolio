@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './about.css';
-// Importamos íconos de FontAwesome (muy estables)
+import ImgSantiago from '../img/SantiagoFormal.png'; // Assuming santiago.png is the correct path and extension
+// Importamos íconos de FontAwesome
 import { 
   FaUser, FaCode, FaHtml5, FaCss3Alt, 
   FaJs, FaReact, FaNodeJs, FaPython, 
   FaDocker, FaAws 
 } from 'react-icons/fa';
-// Importamos solo los que faltan de SimpleIcons
+
 import { SiTypescript, SiTailwindcss, SiPostgresql, SiMysql } from 'react-icons/si';
 
 const About = () => {
@@ -36,7 +37,7 @@ const About = () => {
               <FaUser className="title-icon" /> Sobre mí
             </h2>
             <p className="about-description">
-              Me llamo <span className="highlight-name">Santiago</span>, soy un Ingeniero de Software y Desarrollador Full Stack <strong>colombiano</strong>. Me apasiona crear aplicaciones con múltiples funcionalidades y arquitecturas sólidas. 
+              Me llamo <span className="highlight-name">Santiago</span>, soy un Ingeniero de Software y Desarrollador Full Stack. Me apasiona crear aplicaciones con múltiples funcionalidades y arquitecturas sólidas. 
               <br /><br />
               Actualmente estoy enfocando mi carrera profesional hacia el <strong>Cloud Engineering</strong>, por lo que disfruto aprendiendo constantemente sobre nuevas tecnologías, frameworks y servicios en la nube para construir soluciones escalables.
             </p>
@@ -50,9 +51,9 @@ const About = () => {
             }}
           >
             <div className="image-wrapper">
-              {/* Recuerda cambiar esta URL por tu foto real */}
+              
               <img 
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400" 
+                src={ImgSantiago} 
                 alt="Santiago Castillo" 
                 className="profile-pic"
               />

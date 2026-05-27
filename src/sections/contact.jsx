@@ -11,7 +11,7 @@ const Contact = () => {
 
   // Validar email con regex más robusto
   const validateEmail = (email) => {
-    // Exige al menos 2 caracteres después del último punto (ej: .co, .com)
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };

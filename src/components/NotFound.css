@@ -1,0 +1,144 @@
+.notfound-section {
+  background-color: #050505;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Luces de fondo estilo "Nube/Servidor" */
+.glow-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.top-left {
+  top: -100px;
+  left: -100px;
+}
+
+.bottom-right {
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Contenedor principal */
+.notfound-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* --- EFECTO GLITCH PARA EL 404 --- */
+.glitch {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  position: relative;
+  color: #ffffff;
+  letter-spacing: 5px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pseudo-elementos que crean el "desfase" de color */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  color: #0ff; /* Cyan */
+  z-index: -1;
+  transform: translate(-3px, 2px);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: #c084fc; /* Morado de tu portafolio */
+  z-index: -2;
+  transform: translate(3px, -2px);
+  animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+}
+
+/* Textos informativos */
+.notfound-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.notfound-description {
+  color: #a3a3a3;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Botón de regreso */
+.btn-home {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-home:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.shuttle-icon {
+  font-size: 1.2rem;
+  transform: rotate(-45deg); /* Apunta la nave hacia arriba */
+}
+
+/* Animaciones */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes glitch-anim {
+  0% { clip-path: inset(20% 0 80% 0); transform: translate(-3px, 2px); }
+  20% { clip-path: inset(60% 0 10% 0); transform: translate(3px, -2px); }
+  40% { clip-path: inset(40% 0 50% 0); transform: translate(-3px, 2px); }
+  60% { clip-path: inset(80% 0 5% 0); transform: translate(3px, -2px); }
+  80% { clip-path: inset(10% 0 70% 0); transform: translate(-3px, 2px); }
+  100% { clip-path: inset(30% 0 50% 0); transform: translate(3px, -2px); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(10% 0 60% 0); transform: translate(3px, -2px); }
+  20% { clip-path: inset(30% 0 20% 0); transform: translate(-3px, 2px); }
+  40% { clip-path: inset(70% 0 10% 0); transform: translate(3px, -2px); }
+  60% { clip-path: inset(20% 0 50% 0); transform: translate(-3px, 2px); }
+  80% { clip-path: inset(50% 0 30% 0); transform: translate(3px, -2px); }
+  100% { clip-path: inset(5% 0 80% 0); transform: translate(-3px, 2px); }
+}

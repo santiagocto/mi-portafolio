@@ -9,7 +9,7 @@ import {
   FaDocker, FaAws 
 } from 'react-icons/fa';
 
-import { SiTypescript, SiTailwindcss, SiPostgresql, SiMysql } from 'react-icons/si';
+import { SiAngular, SiTailwindcss, SiPostgresql, SiMysql } from 'react-icons/si';
 
 const About = () => {
   return (
@@ -78,7 +78,7 @@ const About = () => {
               { icon: <FaHtml5 />, color: '#E34F26', name: 'HTML5' },
               { icon: <FaCss3Alt />, color: '#1572B6', name: 'CSS3' },
               { icon: <FaJs />, color: '#F7DF1E', name: 'JavaScript' },
-              { icon: <SiTypescript />, color: '#3178C6', name: 'TypeScript' },
+              { icon: <SiAngular />, color: '#DD0031', name: 'Angular' },
               { icon: <FaReact />, color: '#61DAFB', name: 'React' },
               { icon: <SiTailwindcss />, color: '#06B6D4', name: 'Tailwind CSS' },
               { icon: <FaNodeJs />, color: '#339933', name: 'Node.js' },

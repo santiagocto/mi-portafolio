@@ -10,15 +10,15 @@ import Contact from './sections/contact';
 import './App.css';
 
 function App() {
-  // Obtenemos la ruta actual (ej. "/", "/about", "/asdfgh")
+  
   const currentPath = window.location.pathname;
 
-  // Si la ruta NO es la raíz ("/") y NO está vacía, mostramos el Error 404
+  
   if (currentPath !== "/" && currentPath !== "") {
     return <NotFound />;
   }
 
-  // Si la ruta es correcta ("/"), mostramos todo el portafolio normalmente
+  
   return (
     <>
       <Navbar />

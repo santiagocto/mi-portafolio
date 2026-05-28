@@ -35,10 +35,43 @@
   font-weight: 500;
   font-family: system-ui, -apple-system, sans-serif;
   transition: opacity 0.3s ease;
- 
+  font-size: 0.95rem;
 }
 
 
 .navbar-links a:hover {
   opacity: 0.6;
+}
+
+/* Media Queries para Responsivo Mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    top: 12px;
+    padding: 8px 20px;
+  }
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .navbar-links a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    top: 10px;
+    padding: 6px 15px;
+    border-radius: 30px;
+  }
+
+  .navbar-links {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .navbar-links a {
+    font-size: 0.75rem;
+  }
 }

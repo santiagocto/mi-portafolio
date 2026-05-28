@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/navbar';
 import WhatsAppButton from './components/WhatsAppButton';
 import NotFound from './components/NotFound';
@@ -30,6 +31,7 @@ function App() {
       </main>
       <WhatsAppButton />
       <Footer />
+      <Analytics />
     </>
   );
 }

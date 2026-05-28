@@ -1,0 +1,33 @@
+# robots.txt for Santiago Castillo Portfolio
+# Allow search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /*.json$
+
+# Crawl delay for respectful indexing
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://santiagocto.vercel.app/sitemap.xml
+Sitemap: https://santiagocto.vercel.app/sitemap-projects.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

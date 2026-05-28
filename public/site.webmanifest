@@ -1,0 +1,74 @@
+{
+  "name": "Santiago Castillo - Full Stack Developer & Cloud Engineer",
+  "short_name": "Santiago Castillo",
+  "description": "Portafolio profesional de Santiago Castillo. Full Stack Developer especializado en Cloud Engineering, React, Node.js y AWS.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/headicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/headicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/headicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Ver Proyectos",
+      "short_name": "Proyectos",
+      "description": "Ver los proyectos desarrollados por Santiago Castillo",
+      "url": "/#proyectos",
+      "icons": [
+        {
+          "src": "/headicon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Contactar",
+      "short_name": "Contacto",
+      "description": "Enviar mensaje a Santiago Castillo",
+      "url": "/#contacto",
+      "icons": [
+        {
+          "src": "/headicon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

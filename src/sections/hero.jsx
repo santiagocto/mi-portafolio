@@ -69,7 +69,7 @@ const Hero = () => {
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             santiagocastillo111x@gmail.com
           </a>
-          <a href="https://drive.google.com/file/d/18Y97zfK5qwcG4Jh61DU4qQfDhWZKhwU3/view?usp=sharing" target="_blank" rel="noreferrer" className="btn-social btn-cv">
+          <a href="https://drive.google.com/file/d/1IEOiqdXb4hgqfQLQODy5X3Bp4nfxgvXZ/view?usp=sharing" target="_blank" rel="noreferrer" className="btn-social btn-cv">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
             Ver CV
           </a>

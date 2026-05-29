@@ -1,4 +1,4 @@
-
+/* Contenedor principal */
 .navbar-container {
   position: fixed;
   top: 20px; 
@@ -18,16 +18,14 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
+/* Enlaces */
 .navbar-links {
   display: flex;
   gap: 30px; 
   list-style: none;
   margin: 0;
   padding: 0;
-  
 }
-
 
 .navbar-links a {
   text-decoration: none;
@@ -36,8 +34,8 @@
   font-family: system-ui, -apple-system, sans-serif;
   transition: opacity 0.3s ease;
   font-size: 0.95rem;
+  white-space: nowrap; /* Evita que el texto de un enlace se divida en dos líneas */
 }
-
 
 .navbar-links a:hover {
   opacity: 0.6;
@@ -46,29 +44,31 @@
 /* Media Queries para Responsivo Mobile */
 @media (max-width: 768px) {
   .navbar-container {
-    top: 12px;
-    padding: 8px 20px;
+    top: 15px;
+    padding: 8px 24px;
   }
 
   .navbar-links {
-    gap: 18px;
+    gap: 20px;
   }
 
   .navbar-links a {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-container {
-    top: 10px;
-    padding: 6px 15px;
-    border-radius: 30px;
+    top: 12px;
+    padding: 8px 16px;
+    /* Se eliminó el flex-direction: column para que siga siendo horizontal */
+    width: max-content; /* Asegura que la cápsula se adapte al contenido exacto */
+    max-width: 95vw; /* Evita que se salga de la pantalla si es muy pequeña */
   }
 
   .navbar-links {
     gap: 12px;
-    flex-direction: column;
+    justify-content: center;
   }
 
   .navbar-links a {
